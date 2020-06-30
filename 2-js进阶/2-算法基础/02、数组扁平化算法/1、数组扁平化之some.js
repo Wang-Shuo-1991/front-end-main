@@ -3,7 +3,6 @@
 function aryFlatten (ary) {
     
     while (ary.some(item => Array.isArray(item))) {
-        
         ary = [].concat(...ary);
         console.log('ary', ...ary);
     }
