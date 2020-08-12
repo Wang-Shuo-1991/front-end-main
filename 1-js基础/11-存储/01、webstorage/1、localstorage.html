@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ls</title>
+</head>
+<body>
+
+    <button onclick="changeStorage()">
+        click
+    </button>
+
+    <script>
+
+        function changeStorage() {
+            localStorage.setItem('testcode', '1111')
+        }
+
+        localStorage.setItem('testcode', '0000');
+
+        window.addEventListener('storage', handleChange, false)
+
+        function handleChange (StorageEvent) {
+            alert('changed');
+            console.log('storage changed', StorageEvent.newValue)
+        }   
+
+    </script>
+</body>
+</html>

@@ -130,7 +130,7 @@ const createPromise = (time, id) => () =>
 
 
 
-  async function runPromiseByQueue(myPromises) {
+async function runPromiseByQueue(myPromises) {
     for  (let value of myPromises) {
         await value();
     }

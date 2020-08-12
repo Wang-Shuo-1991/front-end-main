@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输出对象的所有值</title>
+</head>
+<body>
+    
+    <script>
+        // 输出对象的所有值
+
+        var company = {
+            name: "qdywxs",
+            age: 3,
+            sex: "男"
+        }
+
+        // 第一种方法 for in
+
+        for (const key in company) {
+            if (company.hasOwnProperty(key)) {
+                const element = company[key];
+                console.log(element)
+            }
+        }
+
+        // 第二种方法 Object.values
+        console.log(Object.values(company))
+
+
+
+    </script>
+</body>
+</html>
